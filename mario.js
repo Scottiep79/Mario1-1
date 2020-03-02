@@ -1,6 +1,6 @@
 
-printPyramid(4);
-let height = 0;
+printPyramid(5);
+
 
 
 
@@ -15,37 +15,39 @@ let height = 0;
  *       #####
  *      ######
  */
-
-
-function printPyramid(height){
-  for(let num = 0; num < height; num++){ 
-    for(let spaces = height - num; spaces > 1; spaces--){
-      console.log(" ");
-    }
-    for(let hash = 0; hash < num + 2; hash++){
-      console.log("#");
-    }
-   
-
-    
-    
+function printPyramid(height) {
+  
+  
+  
+  let hashes = [];
+  let spaces = [];
+  
+  for (var i = 1; i <= height; i++) {
+    hash(i);
+    space(height-i);
+    console.log(spaces.join("") + hashes.join(""))
   }
-};        
-    
+  
+//create some spaces
+  
+  function space(num) {
+    spaces.length = 0;
+    for (var i = 0; i < num ; i++) {
+      spaces[i] = " "
+    }
+  }
 
+//create some blocks
+
+  function hash(num) {
+    for (var i = 0; i < num + 1 ; i++) {
+      hashes[i] = "#"
+    }
+  }
+}
     // TODO
     // print that pyramid!
-     /*let p = "#"
-    let h = " "
-    let numb = 1
-    while(numb = 1){
-     console.log(h+h+h+h+p+p)
-     
-    }numb++
-     
-     while(num = 2){
-     console.log(h+h+h+p+p+p)
-     }numb++*/
+
 
 
 
