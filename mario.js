@@ -16,9 +16,6 @@ printPyramid(5);
  *      ######
  */
 function printPyramid(height) {
-  
-  
-  
   let hashes = [];
   let spaces = [];
   
